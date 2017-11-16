@@ -14,6 +14,9 @@ public class ExampleTest {
 
     private IAdmin admin;
 
+    // Can also do @BeforeClass that runs before all unit tests of the class
+    // 	Dangerous since it doesn't affect the global environment
+    // 	May create the class before method, use it, then destroy, but next one will make a new one
     @Before
     public void setup() {
         this.admin = new Admin();
